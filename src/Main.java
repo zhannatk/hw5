@@ -15,9 +15,11 @@ public class Main {
         int age = 18;
         if (age >= 18) {
             System.out.println("Если возраст человека равен " + age + ", то он совершеннолетний");
+        } else {
+            System.out.println("он не достиг совершеннолетия, нужно немного подождать");
         }
         int age2 = 17;
-        if (age2 <= 18) {
+        if (age2 < 18) {
             System.out.println("Если возраст человека равен " + age2 + ", то он не достиг совершеннолетия, нужно немного подождать");
         }
 
@@ -78,8 +80,8 @@ public class Main {
             System.out.println("Если возраст ребенка равен " + allowedAge + " лет, то он не может кататься на аттракционе.");
         }
         int allowedAge2 = 6;
-        if (allowedAge2 > 5 || allowedAge2 < 14 ) {
-            System.out.println("Если возраст ребенка равен " + allowedAge2  + " лет, то он может кататься только в сопровождении взрослого. Если взрослого нет, то кататься нельзя.");
+        if (allowedAge2 > 5 || allowedAge2 < 14) {
+            System.out.println("Если возраст ребенка равен " + allowedAge2 + " лет, то он может кататься только в сопровождении взрослого. Если взрослого нет, то кататься нельзя.");
         }
         int allowedAge3 = 15;
         if (allowedAge3 > 14) {
@@ -91,9 +93,51 @@ public class Main {
 
     public static void task6() {
         System.out.println("задача 6");
+        int volume = 102;
+        int seat = 60;
+        int stand = volume - seat;
+        int freeSeats = 30;
+        int freeStand = 42;
+        if (freeSeats >= seat) {
+            System.out.println(" Сидячих мест в вагоне нет");
+        } else {
+            System.out.println("сидячих мест осталось " + (seat - freeSeats));
+        }
+        if (stand <= freeStand) {
+            System.out.println(" стоящих мест в вагоне нет ");
+
+        } else {
+            System.out.println(" в вагоне осталось " + (stand - freeStand) + " мест");
+        }
+        if (volume <= (freeSeats + freeSeats)) {
+            System.out.println(" Места в вагоне не осталось");
+        } else {
+            System.out.println("Итого в вагоне осталось , " + ((seat - freeSeats) + (stand - freeStand)) + " мест . ");
+        }
+
+
     }
 
     public static void task7() {
         System.out.println("задача 7");
+        int one = 3;
+        int two = 1;
+        int three = -2;
+        if (one >= two) {
+            System.out.println(" Число " + one + " больше " + two);
+        } else {
+            System.out.println(" Число " + one + " меньше " + two);
+        }
+        if (two >= three) {
+            System.out.println("Число " + two + " больше " + three);
+        } else {
+            System.out.println(" Число " + two + " меньше " + three);
+        }
+        if (three >= one) {
+            System.out.println(" Число " + three + " больше " + one);
+        } else {
+            System.out.println(" Число " + three + " меньше " + one);
+
+        }
     }
 }
